@@ -42,6 +42,10 @@ describe('Fogbugz', function(){
     it("isn't red unless urgent", function(){
       assert.notEqual(fogbugz.color({priorityid: '4'}), '#6B1515')
     });
+    it("is green if case is being closed", function(){
+      assert.equal(fogbugz.color({"eventtype":"CaseClosed"}), '#ACB731')
+      assert.equal(fogbugz.color({"eventtype":"CaseResolved"}), '#ACB731')
+    });
   });
 
   describe('#slackMessage', function(){
