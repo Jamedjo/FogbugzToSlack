@@ -6,6 +6,10 @@
   "scripts": {
     "test": "mocha"
   },
+  "dependencies": {
+    "request": "*",
+    "underscore-node": "*"
+  },
   "author": "",
   "license": "ISC"
 }

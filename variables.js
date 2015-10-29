@@ -1,0 +1,1 @@
+exports.slackUrl = your_slack_webhook;//'https://hooks.slack.com/services/...';
