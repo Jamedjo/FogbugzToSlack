@@ -12,3 +12,19 @@ Slack integration (via webhook) for receiving FogBugz case updates. Can run on A
 
 ### Troubleshooting
 FogBugz was throwing "The requested name is valid, but no data of the requested type was found", which appeared to be a C# DNS error. Setting a custom domain name resolved this but involves setting up SSL certs on AWS.
+
+## License
+
+    Copyright 2015 James Edwards-Jones
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
