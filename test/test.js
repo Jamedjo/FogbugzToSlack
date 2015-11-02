@@ -37,10 +37,10 @@ describe('Fogbugz', function(){
 
   describe('#color', function(){
     it('urgent is red', function(){
-      assert.equal(fogbugz.color({priorityid: '0'}), '#6B1515')
+      assert.equal(fogbugz.color({priorityid: '1'}), '#6B1515')
     });
     it("isn't red unless urgent", function(){
-      assert.notEqual(fogbugz.color({priorityid: '4'}), '#6B1515')
+      assert.notEqual(fogbugz.color({priorityid: '5'}), '#6B1515')
     });
     it("is green if case is being closed", function(){
       assert.equal(fogbugz.color({"eventtype":"CaseClosed"}), '#ACB731')

@@ -15,7 +15,7 @@ exports.color = function(task){
   if(task.eventtype == "CaseResolved"){return "#ACB731"};
 
   var palette = ["#6B1515", "#5B2E48", "#ACB731", "#EDCD5A", "#ABB3C6", "#BECDD1", "#D7E2E5"];
-  return palette[task.priorityid];
+  return palette[task.priorityid-1];
 };
 
 exports.fields = function(task){
