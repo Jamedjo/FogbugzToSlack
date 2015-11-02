@@ -27,9 +27,16 @@ exports.fields = function(task){
   ];
 };
 
+var emoji = function(task){
+  if(task.eventtype == "CaseClosed"){return ":checkered_flag:"};
+  if(task.category == 1){return ":beetle:"};
+  return undefined;
+};
+
 exports.slackMessage = function(task){
   return {
     text: exports.eventSummary(task),
+    icon_emoji: emoji(task),
     attachments: [{
       title: exports.prettyTitle(task),
       fallback: exports.fallbackDescription(task),

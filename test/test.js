@@ -52,5 +52,11 @@ describe('Fogbugz', function(){
     it('nests fields under attachments', function(){
       assert(fogbugz.slackMessage(case_event).attachments[0].fields)
     });
+    it('sets icon_emoji to checkered flag on CaseClosed', function(){
+      assert.equal(fogbugz.slackMessage({"eventtype":"CaseClosed"}).icon_emoji, ":checkered_flag:");
+    });
+    it('sets icon_emoji to beetle for a bug', function(){
+      assert.equal(fogbugz.slackMessage({"eventtype":"CaseEdited", "category":"1"}).icon_emoji, ":beetle:");
+    });
   });
 });
